@@ -1,9 +1,9 @@
-@extends('./layouts.app')
+@extends('partials.jumbo')
 
 @section('title')
     Games
 @endsection
 
-@section('content')
+@section('jumbotron')
     <h2>GAMES</h2>
 @endsection

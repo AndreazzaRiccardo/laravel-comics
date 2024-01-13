@@ -1,12 +1,14 @@
 @use "../scss/partials/mixins" as *;
 @use "../scss/partials/variables" as *;
 
+
+// COMMON
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 .container {
     width: 80%;
@@ -25,6 +27,9 @@ body {
 ul {
     list-style-type: none;
 }
+
+
+// HEADER
 
 header {
     position: fixed;
@@ -45,10 +50,6 @@ nav {
     @include flex(row, space-between, center);
     width: 100%;
     height: 100px;
-
-    img {
-        height: 80%
-    }
 
     ul {
         @include flex(row, space-between, center);
@@ -74,7 +75,14 @@ nav {
     }
 }
 
+
+// MAIN
+
 main {
+
+    h2 {
+        color: white;
+    }
 
     .comics {
         background-color: $bg-main-color;
@@ -143,4 +151,109 @@ main {
         }
     }
 
+}
+
+
+// AD-SECTION
+
+.ad-section {
+    background-color: $bg-color;
+
+    .container {
+        @include flex(row, space-between, center);
+        height: 170px;
+        padding: 0 2rem;
+    }
+}
+
+.img-cont {
+    color: white;
+    @include flex(row, null, center);
+    gap: 1rem;
+
+    img {
+        width: 25%;
+        aspect-ratio: 1;
+    }
+}
+
+footer {
+    width: 100%;
+    background-image: url(../img/footer-bg.jpg);
+}
+
+.top-footer-section {
+    min-height: 400px;
+    color: white;
+    @include flex(row, space-between, null);
+
+    .dc-bg {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/dc-logo-bg.png);
+        width: 50%;
+    }
+
+    .footer-list {
+        display: flex;
+        padding: 2rem 0;
+        flex-wrap: wrap;
+        width: calc(1200px / 3);
+        justify-content: space-between;
+
+        a {
+            color: gray;
+            font-size: .8rem;
+        }
+
+        .link-list {
+            h4 {
+                margin-bottom: 1rem;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: .3rem;
+            }
+        }
+    }
+}
+
+
+//   FOOTER
+
+.bottom-footer-section {
+    height: 100px;
+    background-color: $bg-dark-color;
+
+    .container {
+        @include flex(row, space-between, center);
+        height: 100%;
+
+        button {
+            border: 2px solid $bg-color;
+            padding: .8rem 1rem;
+            background-color: $bg-dark-color;
+            color: white;
+            font-weight: bolder;
+
+            &:hover {
+                background-color: lighten($bg-dark-color, 20%);
+                cursor: pointer;
+                border: 3px groove;
+            }
+        }
+    }
+
+    .social-list {
+        color: $bg-color;
+        @include flex(row, space-between, center);
+
+        ul {
+            @include flex(row, space-between, center);
+            gap: 1rem;
+            margin-left: 1rem;
+        }
+    }
 }
