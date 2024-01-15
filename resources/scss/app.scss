@@ -64,9 +64,11 @@ nav {
             &:hover {
                 border-bottom: 5px solid $bg-color;
             }
+
+            &.cur-page {
+                border-bottom: 5px solid $bg-color;
+            }
         }
-
-
 
         a {
             color: black;

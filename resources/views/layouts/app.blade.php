@@ -15,7 +15,6 @@
     @include('partials.header')
     <main>
         @yield('content')
-
     </main>
     @include('partials.ad_section')
     @include('partials.footer')

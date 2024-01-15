@@ -13,82 +13,59 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// $nav_links = config('nav.header_links');
+
+// Route::get('/', function () use ($nav_links) {
+//         $comics = config('comics');
+//     return view('home.index', compact('comics', 'nav_links'));
+// })->name('home');
+
+
+
 Route::get('/', function () {
-    $nav_links = [
-            "charaters","comics","movies","tv","games","collectibles","videos","fans","news","shop"
-        ];
         $comics = config('comics');
-    return view('home.index', compact('nav_links', 'comics'));
+    return view('home.index', compact('comics'));
 })->name('home');
 
 Route::get('/charaters', function () {
-    $nav_links = [
-        "charaters","comics","movies","tv","games","collectibles","videos","fans","news","shop"
-    ];
-    return view('charaters', compact('nav_links'));
+    return view('charaters');
 })->name('charaters');
 
 Route::get('/collectibles', function () {
-    $nav_links = [
-        "charaters","comics","movies","tv","games","collectibles","videos","fans","news","shop"
-    ];
-    return view('collectibles', compact('nav_links'));
+    return view('collectibles');
 })->name('collectibles');
 
 Route::get('/comics', function () {
-    $nav_links = [
-        "charaters","comics","movies","tv","games","collectibles","videos","fans","news","shop"
-    ];
-    return view('comics', compact('nav_links'));
+    return view('comics');
 })->name('comics');
 
 Route::get('/fans', function () {
-    $nav_links = [
-        "charaters","comics","movies","tv","games","collectibles","videos","fans","news","shop"
-    ];
-    return view('fans', compact('nav_links'));
+    return view('fans');
 })->name('fans');
 
 Route::get('/games', function () {
-    $nav_links = [
-        "charaters","comics","movies","tv","games","collectibles","videos","fans","news","shop"
-    ];
-    return view('games', compact('nav_links'));
+    return view('games');
 })->name('games');
 
 Route::get('/movies', function () {
-    $nav_links = [
-        "charaters","comics","movies","tv","games","collectibles","videos","fans","news","shop"
-    ];
-    return view('movies', compact('nav_links'));
+    return view('movies');
 })->name('movies');
 
 Route::get('/news', function () {
-    $nav_links = [
-        "charaters","comics","movies","tv","games","collectibles","videos","fans","news","shop"
-    ];
-    return view('news', compact('nav_links'));
+    return view('news');
 })->name('news');
 
 Route::get('/shop', function () {
-    $nav_links = [
-        "charaters","comics","movies","tv","games","collectibles","videos","fans","news","shop"
-    ];
-    return view('shop', compact('nav_links'));
+    return view('shop');
 })->name('shop');
 
 Route::get('/tv', function () {
-    $nav_links = [
-        "charaters","comics","movies","tv","games","collectibles","videos","fans","news","shop"
-    ];
-    return view('tv', compact('nav_links'));
+    return view('tv');
 })->name('tv');
 
 Route::get('/videos', function () {
-    $nav_links = [
-        "charaters","comics","movies","tv","games","collectibles","videos","fans","news","shop"
-    ];
-    return view('videos', compact('nav_links'));
+    return view('videos');
 })->name('videos');
 
 
